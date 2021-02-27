@@ -1,0 +1,40 @@
+﻿@model Cadastro_MVC.Departamento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="content-panel" style="padding:20px">
+
+            <div>
+                <h4>Detalhes do Departamento</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Nome)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Descricao)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new{@class="btn btn-primary"}) 
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-danger" })
+            </p>
+        </div>
+    </div>
+</section>

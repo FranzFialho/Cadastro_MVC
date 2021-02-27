@@ -1,0 +1,46 @@
+﻿@model Cadastro_MVC.Departamento
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="row">
+        <div class="content-panel" style="padding:20px">
+
+            <h3>Deseja deletar o departamento?</h3>
+            <div>    
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Nome)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Descricao)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+            <div class="form-actions">
+                <input type="submit" value="Deletar Departamento" class="btn btn-danger" /> 
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-primary" })
+            </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
