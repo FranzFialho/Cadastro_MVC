@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Cadastro_MVC.Funcionarios>
+    
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +22,7 @@
                         @Html.DisplayNameFor(model => model.Nome)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Email)
+                        @Html.DisplayNameFor(model => model.Departamento)
                     </th>
 
                     <th></th>
@@ -29,12 +30,13 @@
 
                 @foreach (var item in Model)
                 {
+                   
                     <tr>
                         <td>
                             @Html.DisplayFor(modelItem => item.Nome)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Email)
+                            @Html.DisplayFor(modelItem => item.Departamento)
                         </td>
                         <td>
 

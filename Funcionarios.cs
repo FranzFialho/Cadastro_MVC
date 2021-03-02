@@ -25,6 +25,6 @@ namespace Cadastro_MVC
         public string Bairro { get; set; }
         public string Cidade { get; set; }
         public string UF { get; set; }
-        public Nullable<int> Departamento { get; set; }
+        public List<int> Departamento { get; set; }
     }
 }

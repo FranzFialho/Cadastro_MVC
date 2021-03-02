@@ -22,7 +22,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-5">
                                 @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
                             </div>
@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Sobrenome, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-5">
                                 @Html.EditorFor(model => model.Sobrenome, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Sobrenome, "", new { @class = "text-danger" })
                             </div>
@@ -38,7 +38,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-5">
                                 @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             </div>
@@ -46,7 +46,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.RG, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-3">
                                 @Html.EditorFor(model => model.RG, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.RG, "", new { @class = "text-danger" })
                             </div>
@@ -54,7 +54,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.CPF, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-3">
                                 @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.CPF, "", new { @class = "text-danger" })
                             </div>
@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Endereco, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-7">
                                 @Html.EditorFor(model => model.Endereco, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Endereco, "", new { @class = "text-danger" })
                             </div>
@@ -70,7 +70,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Bairro, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-3">
                                 @Html.EditorFor(model => model.Bairro, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Bairro, "", new { @class = "text-danger" })
                             </div>
@@ -78,7 +78,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Cidade, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-3">
                                 @Html.EditorFor(model => model.Cidade, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Cidade, "", new { @class = "text-danger" })
                             </div>
@@ -86,7 +86,7 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.UF, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                            <div class="col-md-2">
                                 @Html.EditorFor(model => model.UF, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.UF, "", new { @class = "text-danger" })
                             </div>
@@ -94,9 +94,16 @@
 
                         <div class="form-group">
                             @Html.LabelFor(model => model.Departamento, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Departamento, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Departamento, "", new { @class = "text-danger" })
+                            <div class="col-md-2">
+
+                                <select name="Departamento_ID" class="form-control"> 
+                                    @{
+                                        foreach (var item in (List<Cadastro_MVC.Departamento>)ViewBag.Departamentos)
+                                        {
+                                            <option value="@item.Id">@item.Nome</option>
+                                        }
+                                    }
+                                </select>
                             </div>
                         </div>
 

@@ -7,11 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <title>Dashio - Bootstrap Admin Template</title>
+    <title>Cadastro MVC</title>
 
     <!-- Favicons -->
-    <link href="~/img/favicon.png" rel="icon">
-    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">
+    @*<link href="~/img/favicon.png" rel="icon">
+    <link href="~/img/apple-touch-icon.png" rel="apple-touch-icon">*@
 
     <!-- Bootstrap core CSS -->
     <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>My<span>APP</span></b></a>
+            <a href="~/" class="logo"><b>My<span>APP</span></b><a/>
             <!--logo end-->
         </header>
 
@@ -48,25 +48,31 @@
             <div id="sidebar" class="nav-collapse ">
                 <!-- sidebar menu start-->
                 <ul class="sidebar-menu" id="nav-accordion">
-                    <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+                    <p class="centered"><a href="profile.html"><img src="img/fr-05.jpg" class="img-circle" width="80"></a></p>
                     <h5 class="centered">Franz Fialho</h5>
-                    <li class="mt">
-                        <a href="index.html">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
+                    
                     <li class="sub-menu">
                         <a href="javascript:;">
                             <i class="fa fa-desktop"></i>
-                            <span>Cadastros</span>
+                            <span>Funcionarios</span>
                         </a>
                         <ul class="sub">
                             <li><a href="~/Funcionarios">Buscar</a></li>
                             <li><a href="~/Funcionarios/Create">Adicionar</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-database"></i>
+                            <span>Departamentos</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="~/Departamentos/Create">Adicionar</a></li>
                             <li><a href="~/Departamentos">Departamentos</a></li>
                         </ul>
                     </li>
+
                 </ul>
                 <!-- sidebar menu end-->
             </div>
